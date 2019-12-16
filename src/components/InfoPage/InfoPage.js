@@ -7,12 +7,23 @@ import React, { Component } from 'react';
 
 class InfoPage extends Component {
 
+  state ={
+    search_query: ''
+  }
+
   componentDidMount() {
     console.log('Component did Mount')
   }
 
   handleChange = (event) => {
     console.log("input:", event.target.value)
+    this.setState({
+      search_query: event.target.value
+    })
+  }
+
+  handleSubmit = () => {
+    alert(`you searched for ${this.state.search_query}`)
   }
 
   render() {
@@ -20,7 +31,7 @@ class InfoPage extends Component {
       <div>
         <label>Board Game Title:</label>
         <form>
-          <input onChange={this.handleChange}></input><input type="button"></input>
+          <input onChange={this.handleChange}></input><input type="button" value="Search" onClick={this.handleSubmit}></input>
         </form>
       </div>
     );
