@@ -3,9 +3,8 @@ import axios from 'axios';
 
 function* bgSearch(action) {
   try {
-   yield console.log('bgSearch saga hit. payload:', action.payload)
    const bgResponse = yield axios.get(`api/boardgames/${action.payload}`);
-   yield console.log('boardgame search response:', bgResponse.data)
+   yield put ({ type: 'BG_RESULTS', payload: bgResponse.data})
   } catch (error) {
       console.log('Error with bgSearchSaga:', error);
   }
