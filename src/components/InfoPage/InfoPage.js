@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-
-// This is one of our simplest components
-// It doesn't have local state, so it can be a function component.
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is, so it doesn't need 'connect()'
+import { connect } from 'react-redux';
 
 class InfoPage extends Component {
 
-  state ={
+  state = {
     search_query: ''
   }
 
@@ -16,27 +12,35 @@ class InfoPage extends Component {
   }
 
   handleChange = (event) => {
-    console.log("input:", event.target.value)
     this.setState({
       search_query: event.target.value
     })
   }
 
   handleSubmit = () => {
-    alert(`you searched for ${this.state.search_query}`)
+    // alert(`you searched for ${this.state.search_query}`)
+    let searchQuery = this.state.search_query
+    this.props.dispatch({ type: "BG_SEARCH", payload: searchQuery });
+    this.setState({
+      search_query: ''
+    })
   }
 
   render() {
     return (
       <div>
-        <label>Board Game Title:</label>
+
         <form>
-          <input onChange={this.handleChange}></input><input type="button" value="Search" onClick={this.handleSubmit}></input>
+          <label>Board Game Title:</label>
+          <input onChange={this.handleChange} value={this.state.search_query}></input><input type="submit" value="Search" onClick={this.handleSubmit}></input>
         </form>
       </div>
     );
   }
-
 }
 
-export default InfoPage;
+const mapStateToProps = state => ({
+  state: state,
+});
+
+export default connect(mapStateToProps)(InfoPage);
