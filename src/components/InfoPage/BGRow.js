@@ -6,7 +6,7 @@ class BGRow extends Component {
 
   state = {
     ...this.props.bg,
-    skill_level: null
+    skill_level: "null"
   }
 
   handleChange = (event) => {
@@ -16,7 +16,7 @@ class BGRow extends Component {
   }
 
   handleClick = () => {
-    if (this.state.skill_level === null) {
+    if (this.state.skill_level === "null") {
       alert('select skill level before adding to demo shelf')
     } else {
       alert(`Added ${this.state.name} to demo shelf library`)
@@ -33,7 +33,7 @@ class BGRow extends Component {
         <td>{this.props.bg.description_preview}</td>
         <td><button onClick={this.handleClick}>Add to Demo Shelf</button><br />
           <select onChange={this.handleChange}>
-            <option value={null}>(select)</option>
+            <option value="null">(select)</option>
             <option value="Beginner">Beginner</option>
             <option value="Easy">Easy</option>
             <option value="Intermediate">Intermediate</option>

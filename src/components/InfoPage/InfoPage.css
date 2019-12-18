@@ -4,12 +4,17 @@
     background-color: rgb(246, 247, 247);
 }
 
+.infoBody {
+    padding: 1em;
+}
+
 tbody td {
     border: 1px solid black;
 }
 
 table{
     border-collapse: collapse;
+    padding: 1em;
 }
 
 th, td {
@@ -22,9 +27,6 @@ th {
     color: white;
 }
 
-h2 {
-    margin: 0px;
-    padding: 0px;
-}
+
 
 
