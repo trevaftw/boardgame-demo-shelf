@@ -57,14 +57,13 @@ class InfoPage extends Component {
                 this.props.state.bgSearchReducer.games.map(
                   (bg) => {
                     return (
-                      <tr><BGRow bg={bg} key={bg.id}/></tr>
+                      <tr key={bg.id} ><BGRow bg={bg}/></tr>
                     )
                   }
                 )
               }
             </tbody>
           </table>
-          {JSON.stringify(this.props.state.bgSearchReducer, null, 2)}
         </div>
       </>
     );
