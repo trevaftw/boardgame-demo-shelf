@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router";
 
-
 //components
 import BGRow from './BGRow'
+
+//styling
+import './InfoPage.css'
 
 class InfoPage extends Component {
 
@@ -36,14 +38,13 @@ class InfoPage extends Component {
 
   render() {
     return (
-      <>
-        <div>
+      <div className="infoBody">
+        <div className="infoDiv">
           <form>
             <label>Board Game Title:</label>
             <input onChange={this.handleChange} value={this.state.search_query}></input><input type="submit" value="Search" onClick={this.handleSubmit}></input>
           </form>
-        </div>
-        <div>
+          <br />
           Skill Levels:<br />
           <ul>
             <li>Easy - Have only played "classic" games such as Monopoly</li>
@@ -52,32 +53,32 @@ class InfoPage extends Component {
             <li>Advanced - ???</li>
           </ul>
         </div>
-        <div>
+        <div className="infoDiv">
           <h2>Results:</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Range of Players</th>
-                <th>Playtime</th>
-                <th>Description</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.state.bgSearchReducer.games &&
-                this.props.state.bgSearchReducer.games.map(
+          {this.props.state.bgSearchReducer.games &&
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Players</th>
+                  <th>Playtime</th>
+                  <th>Description</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.props.state.bgSearchReducer.games.map(
                   (bg) => {
                     return (
                       <tr key={bg.id} ><BGRow bg={bg} /></tr>
                     )
                   }
-                )
-              }
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          }
         </div>
-      </>
+      </div>
     );
   }
 }

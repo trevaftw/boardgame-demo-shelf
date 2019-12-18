@@ -1,0 +1,30 @@
+.infoDiv {
+    width: 80%;
+    margin: 1em auto;
+    background-color: rgb(246, 247, 247);
+}
+
+tbody td {
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+  text-align: left;
+}
+
+th {
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
