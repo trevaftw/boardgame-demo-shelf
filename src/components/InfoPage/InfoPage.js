@@ -41,6 +41,15 @@ class InfoPage extends Component {
           </form>
         </div>
         <div>
+          Skill Levels:<br />
+          <ul>
+            <li>Easy - Have only played "classic" games such as Monopoly</li>
+            <li>Beginner - Have played modern easy games (Catan, Pandemic, Tickdet to Ride)</li>
+            <li>Intermediate - ???</li>
+            <li>Advanced - ???</li>
+          </ul>
+        </div>
+        <div>
           <h2>Results:</h2>
           <table>
             <thead>
