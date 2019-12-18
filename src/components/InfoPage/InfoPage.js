@@ -23,12 +23,15 @@ class InfoPage extends Component {
   }
 
   handleSubmit = () => {
-    // alert(`you searched for ${this.state.search_query}`)
     let searchQuery = this.state.search_query
-    this.props.dispatch({ type: "BG_SEARCH", payload: searchQuery });
-    this.setState({
-      search_query: ''
-    })
+    if (searchQuery.trim() === '') {
+      alert('Err - no blank inputs')
+    } else {
+      this.props.dispatch({ type: "BG_SEARCH", payload: searchQuery });
+      this.setState({
+        search_query: ''
+      })
+    }
   }
 
   render() {
@@ -66,7 +69,7 @@ class InfoPage extends Component {
                 this.props.state.bgSearchReducer.games.map(
                   (bg) => {
                     return (
-                      <tr key={bg.id} ><BGRow bg={bg}/></tr>
+                      <tr key={bg.id} ><BGRow bg={bg} /></tr>
                     )
                   }
                 )
