@@ -3,15 +3,26 @@ import axios from 'axios';
 
 function* bgSearch(action) {
   try {
-   const bgResponse = yield axios.get(`api/boardgames/${action.payload}`);
-   yield put ({ type: 'BG_RESULTS', payload: bgResponse.data})
+    const bgResponse = yield axios.get(`api/boardgames/search/${action.payload}`);
+    yield put({ type: 'BG_RESULTS', payload: bgResponse.data })
   } catch (error) {
-      console.log('Error with bgSearchSaga:', error);
+    console.log('Error with bgSearchSaga:', error);
   }
 }
 
-function* registrationSaga() {
-  yield takeLatest('BG_SEARCH', bgSearch);
+function* addBG(action) {
+  try {
+    // yield console.log('action.payload', action.payload)
+    yield axios.post(`api/boardgames/add`, action.payload)
+  }
+  catch (error) {
+    console.log('Error with add_bg Saga:', error);
+  }
 }
 
-export default registrationSaga;
+function* boardgameSaga() {
+  yield takeLatest('BG_SEARCH', bgSearch);
+  yield takeLatest('ADD_BG', addBG)
+}
+
+export default boardgameSaga;
