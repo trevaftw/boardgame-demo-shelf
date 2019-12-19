@@ -6,9 +6,9 @@ import { withRouter } from "react-router";
 import BGRow from './BGRow'
 
 //styling
-import './InfoPage.css'
+import './AddGame.css'
 
-class InfoPage extends Component {
+class AddGame extends Component {
 
   state = {
     search_query: ''
@@ -89,4 +89,4 @@ const mapStateToProps = state => ({
   state: state,
 });
 
-export default withRouter(connect(mapStateToProps)(InfoPage));
+export default withRouter(connect(mapStateToProps)(AddGame));

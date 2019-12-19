@@ -34,3 +34,7 @@
 .nav-right {
   float: right;
 }
+
+button {
+  font-family: "KenzoRegular";
+}
