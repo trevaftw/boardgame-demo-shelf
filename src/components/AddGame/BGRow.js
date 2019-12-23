@@ -28,8 +28,11 @@ class BGRow extends Component {
     return (
       <>
         <td>{this.props.bg.name}</td>
+        {/* 
+        unsure if want to display or not
         <td>{this.props.bg.min_players} - {this.props.bg.max_players}</td>
-        <td>{this.props.bg.min_playtime} - {this.props.bg.max_playtime}</td>
+        <td>{this.props.bg.min_playtime} - {this.props.bg.max_playtime}</td> 
+        */}
         <td>{this.props.bg.description_preview}</td>
         <td><button onClick={this.handleClick}>Add to Demo Shelf</button><br />
           <select onChange={this.handleChange}>

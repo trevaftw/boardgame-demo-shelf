@@ -8,6 +8,10 @@
     padding: 1em;
 }
 
+.infoTable {
+    overflow-x: auto;
+}
+
 tbody td {
     border: 1px solid black;
 }

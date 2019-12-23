@@ -56,14 +56,16 @@ class AddGame extends Component {
           </div>
         </div>
         <center><h2>Results:</h2></center>
-        <div className="infoDiv">
+        <div className="infoDiv infoTable">
           {this.props.state.bgSearchReducer.games &&
             <table>
               <thead>
                 <tr>
                   <th>Name</th>
+                  {/* 
+                  undecided if want to display this info or not
                   <th>Players</th>
-                  <th>Playtime</th>
+                  <th>Playtime</th> */}
                   <th>Description</th>
                   <th></th>
                 </tr>
