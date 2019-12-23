@@ -20,9 +20,18 @@ function* addBG(action) {
   }
 }
 
+function* fetchGames(action) {
+  try {
+    yield console.log('action.payload', action.payload)
+  } catch (error) {
+    console.log('error with fetch games saga,', error)
+  }
+}
+
 function* boardgameSaga() {
   yield takeLatest('BG_SEARCH', bgSearch);
   yield takeLatest('ADD_BG', addBG)
+  yield takeLatest('FETCH_GAMES', fetchGames)
 }
 
 export default boardgameSaga;
