@@ -9,7 +9,7 @@ import './Footer.css'
 const Footer = () => (
   <footer>
     <center>
-      &copy; Lodestone Coffee & Gamnes
+      &copy; Lodestone Coffee & Games
     </center>
   </footer>
 );

@@ -57,7 +57,7 @@ class DemoShelf extends Component {
         <center>Results:</center>
         <div className="homeResults">
           {/* map the results into a component displaying them as a list */}
-          {JSON.stringify(this.state, null, 2)}
+          {/* {JSON.stringify(this.props, null, 2)} */}
         </div>
       </div>
     );

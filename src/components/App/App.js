@@ -45,10 +45,11 @@ class App extends Component {
             Even though it seems like they are different pages, the user is always on localhost:3000/home */}
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will see the info page instead. */}
+
             <ProtectedRoute
               exact
               path="/add"
-              component={AddGame}
+              component={this.props.reduxState.user.admin ? AddGame : Home}
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
@@ -60,4 +61,8 @@ class App extends Component {
   }
 }
 
-export default connect()(App);
+const mapStateToProps = reduxState => ({
+  reduxState
+});
+
+export default connect(mapStateToProps)(App);
