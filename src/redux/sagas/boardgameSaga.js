@@ -23,7 +23,8 @@ function* fetchGames(action) {
   try {
     yield console.log('fetchGames action.payload', action.payload)
     const fetchResponse = yield axios.get(`api/demos/search/${action.payload.players}/${action.payload.skill}`)
-    // console.log('fetchResponse:', fetchResponse)
+    // console.log('fetchResponse:', fetchResponse.data)
+    yield put({ type: 'FETCH_RESULTS', payload: fetchResponse.data })
   } catch (error) {
     console.log('error with fetch games saga,', error)
   }
