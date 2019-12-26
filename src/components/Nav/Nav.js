@@ -6,9 +6,9 @@ import './Nav.css';
 
 const Nav = (props) => (
   <div className="nav">
-    <Link to="/home">
-      <h2 className="nav-title">Prime Solo Project</h2>
-    </Link>
+    <a href="http://www.lodestonecoffeeandgames.com/">
+      <h2 className="nav-title">Lodestone</h2>
+    </a>
     <div className="nav-right">
       {/* Show the link to the Add Game and the logout button if the user is logged in */}
       {props.user.id && (

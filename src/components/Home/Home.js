@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import SearchResult from './SearchResult.js'
+
 //styling
 import './Home.css'
 
-class DemoShelf extends Component {
+class Home extends Component {
 
   state = {
     players: "null",
@@ -69,4 +71,4 @@ const mapStateToProps = state => ({
 });
 
 // this allows us to use <App /> in index.js
-export default connect(mapStateToProps)(DemoShelf);
+export default connect(mapStateToProps)(Home);

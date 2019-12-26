@@ -12,7 +12,6 @@ function* bgSearch(action) {
 
 function* addBG(action) {
   try {
-    // yield console.log('action.payload', action.payload)
     yield axios.post(`api/boardgames/add`, action.payload)
   }
   catch (error) {
@@ -22,7 +21,9 @@ function* addBG(action) {
 
 function* fetchGames(action) {
   try {
-    yield console.log('action.payload', action.payload)
+    yield console.log('fetchGames action.payload', action.payload)
+    const fetchResponse = yield axios.get(`api/demos/search/${action.payload.players}/${action.payload.skill}`)
+    // console.log('fetchResponse:', fetchResponse)
   } catch (error) {
     console.log('error with fetch games saga,', error)
   }
