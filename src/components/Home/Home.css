@@ -8,17 +8,23 @@
 select { text-align-last:center; }
 
 .resultDiv {
-    margin: 1em;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .top {
     display: flex;
+    flex-wrap: wrap;
     margin: 0.5em;
 }
 
 img {
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
+    margin: auto;
 }
 
 .left {
@@ -26,16 +32,17 @@ img {
     margin: 0.5em;
 }
 .right {
-    width: 67%;
-    margin: 0.5em;
+    width: 50%;
+    max-width: inherit;
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .bgName {
     font-size: 10vw;
-    margin: 1em;
 }
 
 .bgRules {

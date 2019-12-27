@@ -57,13 +57,12 @@ class Home extends Component {
           <button onClick={this.handleClick}>Search</button>
         </div>
         <center>Results:</center>
-        {this.props.state.fetchReducer === "no results" &&
-          <div className="homeResults">
-            {/* map the results into a component displaying them as a list */}
-            {JSON.stringify(this.props.state.fetchReducer, null, 4)}
+        {(this.props.state.fetchReducer === "no results") &&
+          <div className="homeResults"><br />
+            <center>Sorry, we do not have any demos that match</center>
           </div>
         }
-        {this.props.state.fetchReducer[0] &&
+        {this.props.state.fetchReducer[0] && this.props.state.fetchReducer[0].name &&
           this.props.state.fetchReducer.map(
             bg => <SearchResult bg={bg} key={bg.serial_id} />
           )
