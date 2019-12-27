@@ -9,9 +9,10 @@ select { text-align-last:center; }
 
 .resultDiv {
     width: 80%;
-    margin: auto;
+    margin: 1em auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 4px 10px rgb(128, 128, 128);
 }
 
 .top {
@@ -42,15 +43,17 @@ img {
 }
 
 .bgName {
-    font-size: 10vw;
+    font-size: 8vw;
+    margin-top: 10px;
 }
 
 .bgRules {
-    font-size: 5vw;
+    font-size: 4vw;
     margin: 1em;
 }
 
 .bottom {
     margin: 0.5em;
     overflow: auto;
+    max-height: 160px;
 }
