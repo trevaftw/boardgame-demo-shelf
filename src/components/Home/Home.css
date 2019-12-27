@@ -7,6 +7,12 @@
 
 select { text-align-last:center; }
 
+.moreInfo {
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px
+}
+
 .resultDiv {
     width: 80%;
     margin: 1em auto;

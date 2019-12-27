@@ -10,7 +10,8 @@ class Home extends Component {
 
   state = {
     players: "null",
-    skill: "null"
+    skill: "null",
+    hidden: false,
   }
 
   fetchGames = (option) => (event) => {
@@ -31,6 +32,12 @@ class Home extends Component {
     }
   }
 
+  moreInfo = () => {
+    this.setState({
+      hidden: !this.state.hidden
+    })
+  }
+
   render() {
     return (
       <div className="homeDiv">
@@ -45,7 +52,7 @@ class Home extends Component {
             <option value="5">5</option>
             <option value="6">6+</option>
           </select><br /><br />
-          Skill Level? <br />
+          Skill Level?* <br />
           <select onChange={this.fetchGames('skill')}>
             <option value="null">(select)</option>
             <option value="Beginner">Beginner</option>
@@ -54,7 +61,23 @@ class Home extends Component {
             <option value="Advanced">Advanced</option>
           </select><br />
           <br />
-          <button onClick={this.handleClick}>Search</button>
+          <button onClick={this.handleClick}>Search</button><br />
+          <br />
+          <button className="moreInfo" onClick={this.moreInfo}>* - If you have played...</button>
+          {this.state.hidden ?
+            <ul style={{ textAlign: "left" }}>
+              <li>Monopoly or other classic games, choose <i>Beginner</i> for a similar play skill level;
+              or try for a challenge and choose Easy</li>
+              <li>Settlers of Catan, Pandemic, or other modern-classic games, choose <i>Easy</i> for a similar play skill level;
+              or try for a challenge and choose Advanced</li>
+              <li>Terra Mystica, Concordia, or other Euro-style games choose <i>Advanced</i> for a similar play skill level;
+              or try for a challenge and choose Intermediate</li>
+              <li>Terraforming Mars, Twilight Emperium, or other mega-style games, choose <i>Advanced</i></li>
+            </ul>
+            :
+            <>
+            </>
+          }
         </div>
         <center>Results:</center>
         {(this.props.state.fetchReducer === "no results") &&
