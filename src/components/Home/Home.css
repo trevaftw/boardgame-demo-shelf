@@ -6,3 +6,46 @@
 }
 
 select { text-align-last:center; }
+
+.resultDiv {
+    margin: 1em;
+}
+
+.top {
+    display: flex;
+    margin: 0.5em;
+}
+
+img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    max-width: auto;
+}
+
+.left {
+    width: 33%;
+    margin: 0.5em;
+}
+.right {
+    width: 67%;
+    margin: 0.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bgName {
+    font-size: 10vw;
+    margin: 1em;
+}
+
+.bgRules {
+    font-size: 5vw;
+    margin: 1em;
+}
+
+.bottom {
+    margin: 0.5em;
+    overflow: auto;
+}
