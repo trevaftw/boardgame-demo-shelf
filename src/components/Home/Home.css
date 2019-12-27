@@ -17,10 +17,8 @@ select { text-align-last:center; }
 }
 
 img {
-    width: 100%;
-    max-width: 50%;
+    width: 50%;
     height: auto;
-    max-width: auto;
 }
 
 .left {

@@ -10,9 +10,7 @@ class SearchResult extends Component {
         return (
             <div className="resultDiv">
                 <div className="top">
-
                     <img className="bgCover" src={this.props.bg.image_url} alt={`Art for the cover of ${this.props.bg.name}`} />
-
                     <div className="right">
                         <span className="bgName">{this.props.bg.name}</span><br />
                         {this.props.bg.rules_url &&
