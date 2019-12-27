@@ -12,7 +12,8 @@ select { text-align-last:center; }
     margin: 1em auto;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 4px 10px rgb(128, 128, 128);
+    background-color: rgb(246, 247, 247);
+    /* box-shadow: 2px 4px 10px rgb(128, 128, 128); */
 }
 
 .top {
@@ -54,6 +55,13 @@ img {
 
 .bottom {
     margin: 0.5em;
-    overflow: auto;
+    overflow-y: auto;
     max-height: 160px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.bgDescription {
+    margin: 0.5em;
+    font-size: 20px;
 }

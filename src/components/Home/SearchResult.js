@@ -12,14 +12,15 @@ class SearchResult extends Component {
                 <div className="top">
                     <img className="bgCover" src={this.props.bg.image_url} alt={`Art for the cover of ${this.props.bg.name}`} />
                     <div className="right">
-                        <span className="bgName">{this.props.bg.name}</span><br />
+                        <span className="bgName">{this.props.bg.name}</span>
                         {this.props.bg.rules_url &&
                             <span className="bgRules"><a href={this.props.bg.rules_url} >Rules</a></span>
                         }
                     </div>
                 </div>
+                <center>About the game:</center>
                 <div className="bottom">
-                    <p>{this.props.bg.description_preview}</p>
+                    <p className="bgDescription">{this.props.bg.description_preview}</p>
                 </div>
             </div>
         )
