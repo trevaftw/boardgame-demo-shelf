@@ -42,7 +42,7 @@ class Home extends Component {
     return (
       <div className="homeDiv">
         <div className="homeBody">
-          How many players?<br />
+          <p className="question">How many players?</p>
           <select onChange={this.fetchGames('players')}>
             <option value="null">(select)</option>
             <option value="1">1</option>
@@ -51,15 +51,15 @@ class Home extends Component {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6+</option>
-          </select><br /><br />
-          Skill Level?* <br />
+          </select><br />
+          <p className="question">Skill Level?*</p>
           <select onChange={this.fetchGames('skill')}>
             <option value="null">(select)</option>
             <option value="Beginner">Beginner</option>
             <option value="Easy">Easy</option>
             <option value="Intermediate">Intermediate</option>
             <option value="Advanced">Advanced</option>
-          </select><br />
+          </select>
           <br />
           <button onClick={this.handleClick}>Search</button><br />
           <br />

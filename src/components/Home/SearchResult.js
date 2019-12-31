@@ -18,9 +18,13 @@ class SearchResult extends Component {
                         }
                     </div>
                 </div>
-                <center>About the game:</center>
+                <center>
+                    Players: {this.props.bg.min_players} - {this.props.bg.max_players}<br />
+                    Play Length: {this.props.bg.min_playtime} - {this.props.bg.max_playtime}<br />
+                    About the game:
+                </center>
                 <div className="bottom">
-                    <p className="bgDescription">{this.props.bg.description_preview}</p>
+                    <p className="bgDescription">{this.props.bg.description_preview}</p><br />
                 </div>
             </div>
         )

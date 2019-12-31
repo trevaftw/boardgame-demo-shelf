@@ -1,11 +1,23 @@
 .homeBody {
     width: 80%;
     margin: 1em auto;
+    padding: 1em;
     background-color: rgb(246, 247, 247);
     text-align: center;
 }
 
 select { text-align-last:center; }
+
+p {
+    font-size: 5vw;
+    margin: 1vw;
+    padding: 0; 
+}
+
+select {
+    margin: 1vw;
+    padding: 0;
+}
 
 .moreInfo {
     background-color: white;
