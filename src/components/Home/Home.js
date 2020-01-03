@@ -78,7 +78,15 @@ class Home extends Component {
             <>
             </>
           }
+          <div>
+            <p>Or</p><br />
+            <span>enter the name and see if we have it:</span><br />
+            <form>
+              <input></input><button>Search</button>
+            </form>
+          </div>
         </div>
+
         <center>Results:</center>
         {(this.props.state.fetchReducer === "no results") &&
           <div className="homeResults"><br />
