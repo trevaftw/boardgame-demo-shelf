@@ -16,15 +16,13 @@ class SearchResult extends Component {
                         {this.props.bg.rules_url &&
                             <span className="bgRules"><a href={this.props.bg.rules_url} >Rules</a></span>
                         }
+                        <p>
+                            Players: {this.props.bg.min_players} - {this.props.bg.max_players}<br />
+                            Play Length: {this.props.bg.min_playtime} - {this.props.bg.max_playtime}<br />
+                            About the game:
+                        </p>
                     </div>
                 </div>
-                <center>
-                    <p>
-                        Players: {this.props.bg.min_players} - {this.props.bg.max_players}<br />
-                        Play Length: {this.props.bg.min_playtime} - {this.props.bg.max_playtime}<br />
-                        About the game:
-                        </p>
-                </center>
                 <div className="bottom">
                     <p className="bgDescription">{this.props.bg.description_preview}</p><br />
                 </div>
