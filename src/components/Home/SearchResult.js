@@ -17,7 +17,8 @@ class SearchResult extends Component {
                             <span className="bgRules"><a href={this.props.bg.rules_url} >Rules</a></span>
                         }
                         <p>
-                            Players: {this.props.bg.min_players} - {this.props.bg.max_players}<br />
+                            Players, (optimal): {this.props.bg.min_players} - {this.props.bg.max_players}, <i>TBD when database finished</i><br />
+                            Time to Teach: <i>TBD when database finished</i>
                             Play Length: {this.props.bg.min_playtime} - {this.props.bg.max_playtime}<br />
                             About the game:
                         </p>
