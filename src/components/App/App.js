@@ -16,6 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import Home from '../Home/Home';
 import AddGame from '../AddGame/AddGame.js'
+import EditShelf from '../EditShelf/EditShelf'
 
 import './App.css';
 
@@ -46,6 +47,11 @@ class App extends Component {
               exact
               path="/add"
               component={this.props.reduxState.user.admin ? AddGame : Home}
+            />
+            <ProtectedRoute
+              exact
+              path="/edit"
+              component={this.props.reduxState.user.admin ? EditShelf : Home}
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
