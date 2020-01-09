@@ -13,15 +13,30 @@ class EditShelf extends Component {
         console.log('Component did Mount')
     }
 
+    handleInput = (event) => {
+        this.setState({
+            search_query: event.target.value
+        })
+    }
+
+    handleSubmit = () => {
+        console.log(this.state.search_query)
+    }
+
 
 
     render() {
         return (
             <>
                 <div className="infoDiv">
-                    edit shelf
+                    <form>
+                        <input onChange={this.handleInput} placeholder="Enter game title..."></input><input type="submit" value="Search" onClick={this.handleSubmit}></input>
+                    </form>
                 </div>
-                <center><h2>Results:</h2></center>
+                <center>
+                    <h2>Results:</h2>
+                    {JSON.stringify(this.state, null, 2)}
+                </center>
 
             </>
         );
