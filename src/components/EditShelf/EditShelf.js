@@ -20,7 +20,8 @@ class EditShelf extends Component {
     }
 
     handleSubmit = () => {
-        console.log(this.state.search_query)
+        // console.log(this.state.search_query)
+        this.props.dispatch({ type: 'SEARCH_SHELF', payload: this.state.search_query })
     }
 
 

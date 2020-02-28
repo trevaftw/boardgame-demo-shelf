@@ -8,21 +8,39 @@
 
 select { text-align-last:center; }
 
-p {
-    font-size: 4vw;
-    margin: 1vw;
-    padding: 0; 
+.question {
+    font-size: 40px;
+    margin: 0.25vw 0.75vw;
+    padding: 0;
 }
 
-select {
+.line {
+    width: 75%;
+    margin:  0.25vw auto;
+}
+
+p {
+    /* font-size: 4vw;
     margin: 1vw;
+    padding: 0;  */
+}
+
+.dropdown {
+    margin: 0 0 1vw 0;
     padding: 0;
 }
 
 .moreInfo {
     background-color: white;
     border: 1px solid black;
-    padding: 2px
+    padding: 2px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.moreInfo:hover {
+    background-color: rgb(188, 188, 188);
+    transition: 0.7s;
 }
 
 .resultDiv {

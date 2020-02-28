@@ -43,7 +43,7 @@ class Home extends Component {
       <div className="homeDiv">
         <div className="homeBody">
           <p className="question">How many players?</p>
-          <select onChange={this.fetchGames('players')}>
+          <select className="dropdown" onChange={this.fetchGames('players')}>
             <option value="null">(select)</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -51,9 +51,10 @@ class Home extends Component {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6+</option>
-          </select><br />
+          </select>
           <p className="question">Skill Level?*</p>
-          <select onChange={this.fetchGames('skill')}>
+
+          <select className="dropdown" onChange={this.fetchGames('skill')}>
             <option value="null">(select)</option>
             <option value="Beginner">Beginner</option>
             <option value="Easy">Easy</option>
@@ -61,9 +62,12 @@ class Home extends Component {
             <option value="Advanced">Advanced</option>
           </select>
           <br />
-          <button onClick={this.handleClick}>Search</button><br />
+          <button onClick={this.handleClick}>Search</button>
           <br />
           <button className="moreInfo" onClick={this.moreInfo}>* - If you have played...</button>
+          <div className="line">
+            <hr />
+          </div>
           {this.state.hidden ?
             <ul style={{ textAlign: "left" }}>
               <li>Monopoly or other classic games, choose <i>Beginner</i> for a similar play skill level;
@@ -79,7 +83,7 @@ class Home extends Component {
             </>
           }
           <div>
-            <p>Or</p><br />
+            <p className="question">Or</p><br />
             <span>enter the name and see if we have it:</span><br />
             <form>
               <input></input><button>Search</button>
