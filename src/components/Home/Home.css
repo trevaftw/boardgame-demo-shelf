@@ -10,7 +10,13 @@ select { text-align-last:center; }
 
 .question {
     font-size: 40px;
-    margin: 0.25vw 0.75vw;
+    margin: calc(0.5vw + 5px) 0.75vw;
+    padding: 0;
+}
+
+.or {
+    font-size: 20px;
+    margin: 0.5vw 0;
     padding: 0;
 }
 
@@ -32,7 +38,7 @@ p {
 
 .moreInfo {
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 2px;
     font-size: 20px;
     transition: 0.3s;
@@ -41,6 +47,10 @@ p {
 .moreInfo:hover {
     background-color: rgb(188, 188, 188);
     transition: 0.7s;
+}
+
+.searchBar {
+    border: 1px solid black;
 }
 
 .resultDiv {

@@ -83,10 +83,10 @@ class Home extends Component {
             </>
           }
           <div>
-            <p className="question">Or</p><br />
-            <span>enter the name and see if we have it:</span><br />
+            <p className="or">Or</p>
+            <label for="searchBar">enter the name and see if we have it:</label>
             <form>
-              <input></input><button>Search</button>
+              <input className="searchBar" name="searchBar"></input><button>Search</button>
             </form>
           </div>
         </div>
